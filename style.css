@@ -1,0 +1,151 @@
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #f4f6f9
+} 
+
+.container {
+  max-width: 900px;      
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+    border-radius: 0; 
+  }
+} 
+
+  form {
+    flex-direction: column;  
+    gap: 12px;
+  }
+
+  input, select, button {
+    width: 100%;           
+  }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid #d7d7d7;
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+  h2, h3 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .container {
+    padding: 15px;
+  }
+
+  form {
+    flex-wrap: wrap;          
+    gap: 15px;
+  }
+
+  input, select {
+    flex: 1 1 45%;
+  }
+}
+
+/* Desktops (large screens) */
+@media (min-width: 901px) {
+  form {
+    flex-direction: row;
+    gap: 16px;
+  }
+  input, select {
+    flex: 1;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  background: #e8e8e8;
+  color: rgb(0, 0, 0);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tab-button:hover {
+  background: #d7d7d7;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+h1, h2 {
+    text-align:center;
+}
+
+.grading-system {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  margin-bottom: 10px; 
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;   /* Wraps nicely on smaller screens */
+  gap: 12px;         /* Spacing between items */
+  margin-bottom: 20px;
+  align-items: center; /* Vertically aligns inputs & buttons */
+}
+
+form input, form select {
+    flex: 1;              /* Inputs expand evenly */
+    min-width: 150px;     /* Prevent shrinking too small */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 14px;
+    background: #e8e8e8;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+button:hover {
+    background:#d7d7d7
+}

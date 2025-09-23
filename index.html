@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GWA Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>GWA CALCULATOR</h1>
+
+  <nav>
+    <button class="tab-button" onclick="openTab('gwa-tab')">Overall GWA Calculator</button>
+    <button class="tab-button" onclick="openTab('course-tab')">Course GWA Calculator</button>
+  </nav>
+
+  
+  <div id="gwa-tab" class="tab-content" style="display:block;">
+    <div class="grading-system">
+      <label for="grading-system">Grading System:</label>
+      <select id="grading-system">
+        <option value="Descending">Descending (1.00 Highest, 5.00 Lowest)</option>
+        <option value="Ascending">Ascending (5.00 Highest, 1.00 Lowest)</option>
+      </select>
+    </div>
+
+    <h3>Input Your Courses</h3>
+    <form id="subject-form">
+      <input type="text" id="subject" placeholder="Subject Name" required>
+      <input type="number" step="0.25" min="1" max="5" id="grade" placeholder="Grade" required>
+      <input type="number" min="1" id="units" placeholder="Units" required>
+      <button type="submit">Add Subject</button>
+    </form>
+
+    <h2>Courses</h2>
+    <table id="subject-table">
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Grades</th>
+          <th>Units</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <button id="calculate-btn">Calculate GWA</button>
+    <h2 id="result"></h2>
+  </div>
+
+  <!-- ================= Course GWA Calculator ================= -->
+  <div id="course-tab" class="tab-content" style="display:none;">
+    <h2>Course Grading Calculator</h2>
+
+    <form id="course-form">
+      <input type="text" id="component-name" placeholder="Component (e.g. Quiz)" required>
+      <input type="number" id="component-weight" placeholder="Weight (%)" required>
+      <input type="number" id="component-score" placeholder="Score (%)" required>
+      <button type="submit">Add Component</button>
+    </form>
+
+    <h3>Components</h3>
+    <table id="course-table">
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Weight %</th>
+          <th>Score %</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <button id="calculate-course-btn">Calculate Final Grade</button>
+    <h2 id="course-result"></h2>
+  </div>
+
+</body>
+</html>
