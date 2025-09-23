@@ -17,7 +17,7 @@
     <button class="tab-button" onclick="openTab('course-tab')">Course GWA Calculator</button>
   </nav>
 
-  
+  <!-- ================= Overall GWA Calculator ================= -->
   <div id="gwa-tab" class="tab-content" style="display:block;">
     <div class="grading-system">
       <label for="grading-system">Grading System:</label>
@@ -54,13 +54,26 @@
 
   <!-- ================= Course GWA Calculator ================= -->
   <div id="course-tab" class="tab-content" style="display:none;">
-    <h2>Course Grading Calculator</h2>
+    <div class="grading-system">
+      <label for="course-grading-system">Grading System:</label>
+      <select id="course-grading-system">
+        <option value="Descending">Descending (1.00 Highest, 5.00 Lowest)</option>
+        <option value="Ascending">Ascending (5.00 Highest, 1.00 Lowest)</option>
+      </select>
+    </div>
 
+    <h2>Course Grading Calculator</h2>
     <form id="course-form">
-      <input type="text" id="component-name" placeholder="Component (e.g. Quiz)" required>
-      <input type="number" id="component-weight" placeholder="Weight (%)" required>
-      <input type="number" id="component-score" placeholder="Score (%)" required>
-      <button type="submit">Add Component</button>
+      <div class="input-group">
+        <input type="text" id="component-name" placeholder="Component (e.g. Quiz)" required>
+        <input type="number" id="component-weight" placeholder="Weight (%)" required>
+        <input type="number" id="component-score" placeholder="Score" required>
+        <input type="number" id="component-total" placeholder="Total Score" required>
+      </div>
+
+      <div class="button-group">
+        <button type="submit">Add Component</button>
+      </div>
     </form>
 
     <h3>Components</h3>
@@ -69,13 +82,15 @@
         <tr>
           <th>Component</th>
           <th>Weight %</th>
-          <th>Score %</th>
+          <th>Score</th>
+          <th>Total</th>
+          <th>Percentage</th>
           <th>Action</th>
         </tr>
       </thead>
       <tbody></tbody>
     </table>
-
+    
     <button id="calculate-course-btn">Calculate Final Grade</button>
     <h2 id="course-result"></h2>
   </div>
