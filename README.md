@@ -10,11 +10,11 @@ IDE: Visual Studio Code
 Version Control: Git & GitHub  
 
 ## 📂 Project Features  
-Feature | Description  
-Input Fields | Allows users to enter grades and corresponding units.  
-Auto Computation | Automatically calculates the GWA based on inputs.  
-Responsive Design | Works on desktop and mobile screens.  
-Clean UI | Simple layout for ease of use and readability.  
+**Feature | Description**  
+**Input Fields** | Allows users to enter grades and corresponding units.  
+**Auto Computation** | Automatically calculates the GWA based on inputs.  
+**Responsive Design** | Works on desktop and mobile screens.  
+**Clean UI** | Simple layout for ease of use and readability.  
 
 
 
